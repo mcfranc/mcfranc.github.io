@@ -1,5 +1,5 @@
-## Profile page for gh-pages
+# mcfranc.github.io
 
-A single page website using React/Redux and Bideo.js
+GitHub User Page created using React, Redux, and Bideo.js.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Bootstrapped with create-react-app.
