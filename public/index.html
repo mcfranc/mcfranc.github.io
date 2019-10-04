@@ -1,61 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-149437031-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-149437031-1');
+    </script>
     <meta charset="UTF-8">
-    <meta name="description" content="Profile page of Mark Francis">
-    <meta name="keywords" content="profile mark francis">
+    <meta name="description" content="London-based creative director, digital designer, and full stack web developer">
+    <meta name="keywords" content="mark francis profile, creative web developer, full stack web development ruby on rails, full screen background video loop, le wagon, fashion web developer, luxury web design">
     <meta name="author" content="Mark Francis">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Mark Francis - Full Stack Web Developer</title>
+    <title>Mark Francis | Full Stack Web Developer</title>
     <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
     <link rel="stylesheet" href="style.css">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
   </head>
   <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-
     <div id="container">
-      <video id="background_video" loop muted></video>
-      <div id="video_cover"></div>
-      <div id="overlay"></div>
-
-      <div id="video_controls">
-        <span id="play">
-          <img src="play.png">
-        </span>
-        <span id="pause">
-          <img src="pause.png">
-        </span>
-      </div>
-
-      <section id="main_content">
-        <div class="header">
-          <div class="header_text">
-            <div class="name">
-              Mark Francis
+      <div id="video-cover">
+        <video id="video" muted loop autoplay preload="auto">
+          <source src="birds.mp4" type="video/mp4">
+        </video>
+        <div id="overlay"></div>
+        <section id="main-content">
+          <div class="header">
+            <div class="header-text">
+              <div class="name">
+                Mark Francis
+              </div>
+              <div class="description">
+                London-based creative director, digital designer, and full stack web developer
+              </div>
             </div>
-            <div class="description">
-              London-based creative director, digital designer, and full stack web developer
+            <img src="./gallo_roman_medallion.png" alt="Gallo Roman Medallion" id="logo">
+          </div>
+          <div class="projects">
+            <div class="project-description"></div>
+          </div>
+
+          <div class="footer">
+            <div class="icons">
+              <a href="https://www.linkedin.com/in/mark-c-francis/"><i class="fab fa-linkedin"></i></a>
+              <a href="https://github.com/mcfranc"><i class="fab fa-github-square"></i></a>
+              <a href="https://www.pinterest.co.uk/marcusfranciscus/"><i class="fab fa-pinterest-square"></i></a>
+            </div>
+            <div class="video-control">
+              <i class="far fa-pause-circle" id="btn" onClick="myFunction()"></i>
             </div>
           </div>
-          <img src="./gallo_roman_medallion.png" alt="Gallo Roman Medallion" id="logo">
-        </div>
-        <div class="projects">
-          <div class="project-description"></div>
-        </div>
-      </section>
-
-      <div id="icons">
-        <a href="https://www.linkedin.com/in/mark-c-francis/"><i class="fab fa-linkedin"></i></a>
-        <a href="https://github.com/mcfranc"><i class="fab fa-github-square"></i></a>
-        <a href="https://www.pinterest.co.uk/marcusfranciscus/"><i class="fab fa-pinterest-square"></i></a>
+        </section>
       </div>
     </div>
-  <script src="bideo.js"></script>
-  <script src="main.js"></script>
+
+    <script>
+    var video = document.getElementById("video");
+    var btn = document.getElementById("btn");
+
+    function myFunction() {
+      if (video.paused) {
+        video.play();
+        btn.classList.remove("fa-play-circle");
+        btn.classList.add("fa-pause-circle");
+      } else {
+        video.pause();
+        btn.classList.remove("fa-pause-circle");
+        btn.classList.add("fa-play-circle");
+      }
+    }
+    </script>
   </body>
 </html>
